@@ -131,7 +131,7 @@ namespace NetworkMonitor
         private void UpdateUI(bool connected, string log="")
         {
             string str_con = connected ? Resources.STR_CONNECTED : Resources.STR_DISCONNECTED;
-            btnStartMonitor.Text = _netInfo.IsMonitoring ? "Stop" : "Start";
+            tbStartMonitor.Text = $"{(_netInfo.IsMonitoring ? "Stop" : "Start")} Monitoring";
             lblConnection.BackColor = _netInfo.IsMonitoring ? (connected ? _connectedColor : Color.Red) : Color.White;
             lblConnection.Text = $"Network {str_con}";
             if (!_netInfo.IsMonitoring) lblConnection.Text += " (Not Monitoring)";
@@ -153,12 +153,6 @@ namespace NetworkMonitor
 
             UpdateUI(_netInfo.IsConnected());
         }
-
-        private void btnStartMonitor_Click(object sender, EventArgs e)
-        {
-            // toggle monitoring
-            SetMonitoring(!_netInfo.IsMonitoring);
-        }
         
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -166,12 +160,7 @@ namespace NetworkMonitor
             _netInfo.StopMonitor();
 
         }
-
-        private void btnCheckNetwork_Click(object sender, EventArgs e)
-        {
-            UpdateUI();
-        }
-
+        
         void ShowInfo(bool show)
         {
             _showInfo = show;
@@ -182,11 +171,58 @@ namespace NetworkMonitor
         {
             ShowInfo(!_showInfo);
         }
+        
+        private void tbStartMonitor_Click(object sender, EventArgs e)
+        {
+            // toggle monitoring
+            SetMonitoring(!_netInfo.IsMonitoring);
+        }
 
-        private void btnClearLog_Click(object sender, EventArgs e)
+        private void tbClearLog_Click(object sender, EventArgs e)
         {
             NetLog.Clear();
             if (_netInfo.IsMonitoring) AddLog("Monitoring...");
+        }
+
+        private void tbCheckNetwork_Click(object sender, EventArgs e)
+        {
+            UpdateUI();
+        }
+
+        private void tbEmail_Click(object sender, EventArgs e)
+        {
+            //string email = ((Label) sender).Text;
+            //System.Diagnostics.Process.Start($"mailto:{email}");
+        }
+
+        private void tbCopyEmail_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbEmail.Text);
+        }
+
+        private void tbEmail_ButtonClick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start($"mailto:{tbEmail.Text}");
+        }
+
+        private void tbLinkedin_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/tbener/");
+        }
+
+        private void tbLinks_MouseEnter(object sender, EventArgs e)
+        {
+            toolStrip.Cursor = Cursors.Hand;
+        }
+
+        private void tbLinks_MouseLeave(object sender, EventArgs e)
+        {
+            toolStrip.Cursor = Cursors.Default;
+        }
+
+        private void tbFacebook_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/tbener");
         }
     }
 }
