@@ -1,9 +1,0 @@
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\bin\Release\NetworkMonitor.exe.config
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\bin\Release\NetworkMonitor.exe
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\bin\Release\NetworkMonitor.pdb
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\obj\Release\NetworkMonitor.Form1.resources
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\obj\Release\NetworkMonitor.Properties.Resources.resources
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\obj\Release\NetworkMonitor.csproj.GenerateResource.Cache
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\obj\Release\NetworkMonitor.exe
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\obj\Release\NetworkMonitor.pdb
-c:\users\tbener\documents\visual studio 2015\Projects\NetworkMonitor\NetworkMonitor\obj\Release\NetworkMonitor.csprojResolveAssemblyReference.cache
